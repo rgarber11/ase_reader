@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "ase_reader"
+version = "0.0.1"
+authors = [
+        { name="Richard Garber", email="rg.1029384756@gmail.com" },
+]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: File Formats",
+    "Topic :: Multimedia :: Graphics",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/pypa/sampleproject"
+Issues = "https://github.com/pypa/sampleproject/issues"
+
+[project.optional-dependencies]
+color = ["opencv-python>=4.10"]
+
+[project.scripts]
+ase_reader = "ase_reader.ase_reader:main"
+[tool.setuptools.package-data]
+ase_reader = ["py.typed"]
+[tool.setuptools.packages.find]
+where = ["src"]
+
